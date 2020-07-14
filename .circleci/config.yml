@@ -9,7 +9,7 @@ jobs:
 
       - run:
           name: Build gem
-          command: gem build sequenceable
+          command: gem build acts_in_sequence
 
       - run:
           name: Install gem dependencies
