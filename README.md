@@ -11,7 +11,7 @@ Tough its not just auto-increment, you can do [scoped sequencing](#scope) and mo
 ### Install
 
 ```ruby
-gem 'acts_in_sequence'
+gem 'acts_in_sequence', git: 'https://github.com/bigbinary/acts_in_sequence'
 ```
 
 ```ruby
