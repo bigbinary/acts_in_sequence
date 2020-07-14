@@ -1,5 +1,8 @@
 # ActsInSequence
 
+[![bigbinary](https://circleci.com/gh/bigbinary/acts_in_sequence/tree/master.svg?style=shield)](https://app.circleci.com/pipelines/github/bigbinary)
+
+
 Adds sequencing to the database records.
 
 Often we want to keep a record `sequence`/`order` in the database. This gem takes care of adding sequence (auto-incremented) to newly added records.
