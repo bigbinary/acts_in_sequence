@@ -3,6 +3,11 @@
 module ActsInSequence
   module Core
     protected
+      def sequence_is_not_set?
+        _val = self[sequencing_configuration[:column_name]]
+        _val.nil? || _val.zero?
+      end
+
       def assign_sequence_before_create
         self[sequencing_configuration[:column_name]] = deduce_last_sequence + 1
       end

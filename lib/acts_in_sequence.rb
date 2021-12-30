@@ -40,7 +40,7 @@ module ActsInSequence
     scope :without_sequence_order, -> { reorder("") }
 
     # Assign sequence before create
-    before_create :assign_sequence_before_create
+    before_create :assign_sequence_before_create, if: :sequence_is_not_set?
   end
 end
 
