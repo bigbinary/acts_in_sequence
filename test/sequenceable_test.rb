@@ -25,6 +25,23 @@ class ActsInSequenceTest < Minitest::Test
   end
 
   ##
+  # Tests that when sequence is given, the custom sequence is not set
+  #
+  def test_that_new_sequence_is_not_assigned_when_sequence_is_already_set
+    Independent.delete_all
+
+    record = Independent.create(name: "Record 1", sequence: 100)
+    assert_equal 100, record.sequence
+  end
+
+  def test_that_new_sequence_is_assigned_when_sequence_is_zero
+    Independent.delete_all
+
+    record = Independent.create(name: "Record 1", sequence: 0)
+    assert_equal 1, record.sequence
+  end
+
+  ##
   # Tests with global scope for sequencing
   #
   def test_that_new_sequence_is_assigned_to_independent_records
